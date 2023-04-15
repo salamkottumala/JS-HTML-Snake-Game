@@ -1,0 +1,72 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Java Snake Game</title>
+    <style>
+      body {
+        background-color: #0818bf;
+        width: 90vw;
+        height: 90vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #game-board {
+        flex-grow: 1;
+        width: 100vmin;
+        height: 100vmin;
+        background-color: #f7b4b4;
+        display: grid;
+        grid-template-columns: repeat(21, 1fr);
+        grid-template-rows: repeat(21, 1fr);
+      }
+      .snake {
+        background-color: hsl(132, 96%, 18%);
+        border: 0.25vmin solid black;
+        border-radius: 3px;
+      }
+      .food {
+        background-color: hsl(357, 96%, 33%);
+        border: 0.25vmin solid black;
+      }
+      #restart {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        font-size: 3rem;
+        border-radius: 20px;
+        display: none;
+      }
+      #restart:hover {
+        scale: 1.01;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="game-board"></div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+        "
+      >
+        <button id="up">+</button>
+        <p style="color: aliceblue" id="speed">Speed 5</p>
+        <button id="down">-</button>
+      </div>
+    </div>
+    <button id="restart">Restart Game</button>
+    <script src="start.js" defer type="module"></script>
+  </body>
+</html>
